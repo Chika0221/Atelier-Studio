@@ -17,6 +17,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
+  box_ui:
+    dependency: "direct main"
+    description:
+      path: "/home/chika/dev/flu/box_ui"
+      relative: false
+    source: path
+    version: "0.0.1"
   characters:
     dependency: transitive
     description:
