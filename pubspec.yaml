@@ -41,7 +41,7 @@ dependencies:
 
 
   box_ui:
-    path: /home/chika/dev/flu/box_ui
+    path: /home/chika/dev/flu/packages/box_ui
 dev_dependencies:
   flutter_test:
     sdk: flutter

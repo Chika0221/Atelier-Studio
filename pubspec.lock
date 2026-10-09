@@ -20,7 +20,7 @@ packages:
   box_ui:
     dependency: "direct main"
     description:
-      path: "/home/chika/dev/flu/box_ui"
+      path: "/home/chika/dev/flu/packages/box_ui"
       relative: false
     source: path
     version: "0.0.1"
