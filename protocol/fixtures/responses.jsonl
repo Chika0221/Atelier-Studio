@@ -1,0 +1,8 @@
+{"id":1,"result":{"protocol_version":1,"daemon_version":"0.1.0"}}
+{"id":1,"error":{"code":"unauthorized","message":"token mismatch"}}
+{"id":1,"error":{"code":"version_mismatch","message":"daemon speaks protocol 2, client speaks 1"}}
+{"id":2,"result":{"hid":{"status":"ok"},"audio":{"status":"ok"},"udev":{"status":"ok"}}}
+{"id":2,"result":{"hid":{"status":"error","code":"permission_denied","message":"hidraw を開けません。udev ルールを確認してください"},"audio":{"status":"error","code":"pulse_unavailable","message":"pactl info が失敗しました"},"udev":{"status":"error","code":"rule_missing","message":"99-atelier.rules が見つかりません"}}}
+{"id":2,"result":{"hid":{"status":"ok"},"audio":{"status":"ok"},"udev":{"status":"not_applicable"}}}
+{"id":3,"result":{"active":false}}
+{"id":4,"error":{"code":"unknown_method","message":"unknown method: foo.bar"}}

@@ -1,0 +1,3 @@
+{"id":1,"method":"hello","params":{"token":"00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff","protocol_version":1,"client":"atelier_studio"}}
+{"id":2,"method":"diagnostics.get","params":{}}
+{"id":3,"method":"vial_mode.get","params":{}}

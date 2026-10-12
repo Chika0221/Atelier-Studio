@@ -1,0 +1,3 @@
+{"event":"vial_mode.changed","data":{"active":true}}
+{"event":"vial_mode.changed","data":{"active":false}}
+{"event":"diagnostics.changed","data":{"hid":{"status":"error","code":"not_found","message":"キーボードが見つかりません"},"audio":{"status":"ok"},"udev":{"status":"ok"}}}
