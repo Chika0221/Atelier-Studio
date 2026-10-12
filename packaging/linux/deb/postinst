@@ -1,0 +1,12 @@
+#!/bin/sh
+# udev ルールを即時反映する（再起動・挿し直し不要にする）。
+set -e
+
+if [ "$1" = "configure" ]; then
+    udevadm control --reload-rules || true
+    udevadm trigger --subsystem-match=hidraw || true
+fi
+
+# デーモンの自動起動はユーザー単位なので、ここでは有効化しない。
+# 各ユーザーで: systemctl --user enable --now atelier-daemon.service
+exit 0

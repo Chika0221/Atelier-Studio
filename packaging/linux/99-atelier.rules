@@ -1,0 +1,8 @@
+# Atelier キーボードの Raw HID（hidraw）を、ログイン中のユーザーが root なしで開けるようにする。
+# Vial 公式アプリも同じルールで動く。
+#
+# TODO: VID/PID は仮の値。ファームの info.json（usb.vid / usb.pid）が決まったら差し替える。
+#       ATTRS{idVendor} / ATTRS{idProduct} は 0x を付けない小文字16進4桁で書く。
+#
+# 反映: sudo udevadm control --reload-rules && sudo udevadm trigger
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="feed", ATTRS{idProduct}=="0000", MODE="0660", TAG+="uaccess"
