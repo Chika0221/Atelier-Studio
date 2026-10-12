@@ -1,0 +1,11 @@
+Package: atelier-studio
+Version: @VERSION@
+Architecture: amd64
+Maintainer: Chika0221 <TODO>
+Section: utils
+Priority: optional
+Depends: libgtk-3-0, libayatana-appindicator3-1, pulseaudio-utils
+Description: Companion app for the Atelier modular keyboard
+ Resident daemon (Rust) and settings GUI (Flutter) for the Atelier
+ modular keyboard: keymap editing over VIA/Vial, per-app volume via
+ faders, custom keycode scripts and OLED output.

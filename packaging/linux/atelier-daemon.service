@@ -1,0 +1,18 @@
+# Atelier 常駐デーモン（systemd --user）。GUI はここに含めない（必要なときだけデーモンが起動する）。
+#
+# 有効化: systemctl --user enable --now atelier-daemon.service
+# ログ:   journalctl --user -u atelier-daemon.service -f
+[Unit]
+Description=Atelier keyboard companion daemon
+# トレイ・通知を出すのでグラフィカルセッションの中で動かす
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/atelier/atelier-daemon
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target
