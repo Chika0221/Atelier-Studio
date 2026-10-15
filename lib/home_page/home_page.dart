@@ -1,5 +1,6 @@
 import 'package:atelier_studio/widgets/custom_titlebar.dart';
 import 'package:atelier_studio/widgets/normal_layout.dart';
+import 'package:box_ui/box_ui.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -10,14 +11,11 @@ class HomePage extends HookConsumerWidget {
     return ClipRRect(
       borderRadius: .circular(8),
       child: Container(
-        color: Color(0xFF000000),
+        color: boxTheme.background,
         child: NormalLayout(
           header: CostomTitlebar(),
-          body: Container(color: Color.fromARGB(255, 205, 225, 250)),
-          sideBar: Container(
-            width: 300,
-            color: Color.fromARGB(255, 205, 225, 250),
-          ),
+          body: Container(color: boxTheme.accent),
+          sideBar: Container(width: 300, color: boxTheme.accent),
         ),
       ),
     );
