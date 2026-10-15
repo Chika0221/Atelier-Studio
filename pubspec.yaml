@@ -42,6 +42,10 @@ dependencies:
 
   box_ui:
     path: /home/chika/dev/flu/packages/box_ui
+  bitsdojo_window: ^0.1.6
+  flutter_hooks: ^0.21.3+1
+  hooks_riverpod: ^3.4.3
+  import_sorter: ^4.6.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
