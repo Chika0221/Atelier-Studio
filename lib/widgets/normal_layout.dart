@@ -1,3 +1,4 @@
+import 'package:atelier_studio/widgets/side_bar.dart';
 import 'package:flutter/widgets.dart';
 
 class NormalLayout extends StatelessWidget {
@@ -21,28 +22,27 @@ class NormalLayout extends StatelessWidget {
         mainAxisSize: .max,
         children: [
           SizedBox(child: header),
-          SizedBox(height: 8),
+          SizedBox(height: (header != null) ? 8 : 16),
           Expanded(
             child: Row(
               mainAxisSize: .max,
               children: [
+                SizedBox(width: 16),
                 SizedBox(
                   child: ClipRRect(
-                    borderRadius: .horizontal(right: .circular(16)),
-                    child: sideBar,
+                    borderRadius: .circular(16),
+                    child: SideBar(),
                   ),
                 ),
                 SizedBox(width: 16),
                 Expanded(
-                  child: ClipRRect(
-                    borderRadius: .horizontal(left: .circular(16)),
-                    child: body,
-                  ),
+                  child: ClipRRect(borderRadius: .circular(16), child: body),
                 ),
+                SizedBox(width: 16),
               ],
             ),
           ),
-          SizedBox(height: 8),
+          SizedBox(height: (footer != null) ? 8 : 16),
           SizedBox(child: footer),
         ],
       ),
