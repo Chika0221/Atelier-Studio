@@ -8,7 +8,7 @@ void main() {
   runApp(StudioApp());
 
   doWhenWindowReady(() {
-    const initialSize = Size(600, 450);
+    const initialSize = Size(720, 500);
     appWindow.minSize = initialSize;
     appWindow.size = initialSize;
     appWindow.alignment = Alignment.center;
@@ -24,6 +24,7 @@ class StudioApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return WidgetsApp(
       color: const Color(0x00000000),
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
       pageRouteBuilder: <T>(RouteSettings settings, WidgetBuilder builder) {
         return PageRouteBuilder<T>(

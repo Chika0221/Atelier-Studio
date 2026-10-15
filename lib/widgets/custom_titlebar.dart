@@ -1,4 +1,5 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'package:box_ui/box_ui.dart';
 import 'package:flutter/widgets.dart';
 
 class CostomTitlebar extends StatefulWidget {
@@ -13,6 +14,10 @@ class CostomTitlebar extends StatefulWidget {
 class _CostomTitlebarState extends State<CostomTitlebar> {
   @override
   Widget build(BuildContext context) {
+    final WindowButtonColors buttonColor = WindowButtonColors(
+      iconNormal: boxTheme.accent,
+    );
+
     return SizedBox(
       child: Stack(
         children: [
@@ -21,9 +26,9 @@ class _CostomTitlebarState extends State<CostomTitlebar> {
           Row(
             children: [
               Expanded(child: WindowTitleBarBox(child: MoveWindow())),
-              MinimizeWindowButton(),
-              MaximizeWindowButton(),
-              CloseWindowButton(),
+              MinimizeWindowButton(colors: buttonColor),
+              MaximizeWindowButton(colors: buttonColor),
+              CloseWindowButton(colors: buttonColor),
             ],
           ),
         ],
