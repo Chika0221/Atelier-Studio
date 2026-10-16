@@ -4,7 +4,13 @@ import 'package:box_ui/box_ui.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  boxTheme.changeTheme(Color(0xFFfcf9eb), Color(0xFF000000));
+  // boxTheme.changeTheme(Color(0xFFfcf9eb), Color(0xFF000000));
+  boxTheme.changeTheme(
+    Color.fromARGB(255, 18, 168, 209),
+    Color.fromARGB(255, 251, 252, 252),
+    primaryFontFamily: "Black Ops One",
+    secondaryFontFamily: "Kosugi Maru",
+  );
   runApp(StudioApp());
 
   doWhenWindowReady(() {
@@ -25,6 +31,7 @@ class StudioApp extends StatelessWidget {
     return WidgetsApp(
       color: const Color(0x00000000),
       debugShowCheckedModeBanner: false,
+      textStyle: boxTheme.setTextStyle(),
       home: HomePage(),
       pageRouteBuilder: <T>(RouteSettings settings, WidgetBuilder builder) {
         return PageRouteBuilder<T>(

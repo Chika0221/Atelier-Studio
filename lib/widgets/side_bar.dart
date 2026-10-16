@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SideBar extends HookConsumerWidget {
   const SideBar({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isOpen = useState(true);
