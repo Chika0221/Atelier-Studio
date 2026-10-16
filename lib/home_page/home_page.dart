@@ -1,5 +1,4 @@
 import 'package:atelier_studio/widgets/custom_titlebar.dart';
-import 'package:atelier_studio/widgets/normal_layout.dart';
 import 'package:box_ui/box_ui.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -18,6 +17,7 @@ class HomePage extends HookConsumerWidget {
             color: boxTheme.fillColor,
             child: Center(
               child: Column(
+                mainAxisAlignment: .spaceAround,
                 children: [
                   Text("HELLO", style: boxTheme.primaryTextStyle),
                   Button(
@@ -26,11 +26,14 @@ class HomePage extends HookConsumerWidget {
                       print("aaa");
                     },
                   ),
+                  IconButton(onClick: () {}),
                 ],
               ),
             ),
           ),
-          sideBar: Container(width: 300, color: boxTheme.accent),
+          sideBar: SideBar(
+            body: Container(height: 500, color: boxTheme.accent),
+          ),
         ),
       ),
     );
