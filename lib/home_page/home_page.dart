@@ -14,7 +14,22 @@ class HomePage extends HookConsumerWidget {
         color: boxTheme.background,
         child: NormalLayout(
           header: CostomTitlebar(),
-          body: Container(color: boxTheme.accent),
+          body: Container(
+            color: boxTheme.fillColor,
+            child: Center(
+              child: Column(
+                children: [
+                  Text("HELLO", style: boxTheme.primaryTextStyle),
+                  Button(
+                    label: "ボタン",
+                    onClick: () {
+                      print("aaa");
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
           sideBar: Container(width: 300, color: boxTheme.accent),
         ),
       ),
